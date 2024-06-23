@@ -9,6 +9,7 @@
 body{
     font-family: Poppins;
     color:aliceblue;
+    background: linear-gradient(to right, #041308, #0b3317);
 }
 
 .main{
@@ -17,7 +18,6 @@ body{
     gap: 40px;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right, #041308, #0b3317);
 }
 
 .main-left{
@@ -93,23 +93,26 @@ body{
 @media screen and (width<=1024px) {
     .main{
         flex-direction: column;
-        padding-block: 20px;
-        gap:5px
+        margin-block-start:20px;
+        gap:15px;
+        overflow: scroll;
+        
     }
 
     .main-left{
-        margin-left: 0px;
+        margin: 20px;
+        margin-left: 0px; 
     }
 
     .main-right{
         grid-template-rows: repeat(7,1fr);
+        grid-template-columns: repeat(1,1fr);
         margin-right: 0px;
-        
+        gap: 15px;    
     }
 
-    .box{
-        
-        grid-row: span 1;
+    .box{    
+        grid-row: span 10;
         grid-column: span 3;
     }
 }
