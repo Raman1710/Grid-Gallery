@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins;
+    color:aliceblue;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #041308, #0b3317);
+}
+
+.main-left{
+    text-align: center;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    height: 50%;
+}
+
+.main-right{
+    width: 60%;
+    height: 60%;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 5px;
+}
+
+.box{
+    font-size: larger;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a4a4a;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+}
+
+.box:hover{
+    background-color: #999999;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0 0 4px #fff;
+}
+
+.waterfall{
+    background-image: url(https://images.pexels.com/photos/358457/pexels-photo-358457.jpeg);
+}
+.hills{
+    background-image: url(https://images.pexels.com/photos/1192632/pexels-photo-1192632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+.ocean{
+    background-image: url(https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.rain{
+    background-image: url(https://images.pexels.com/photos/2609106/pexels-photo-2609106.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.mountain{
+    background-image: url(https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.trees{
+    background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.beach{
+    background-image: url(https://images.pexels.com/photos/315998/pexels-photo-315998.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.row-2{
+    grid-row: span 2;
+}
+
+.column-2{
+    grid-column: span 2;
+}
+
+@media screen and (width<=1024px) {
+    .main{
+        flex-direction: column;
+        padding-block: 20px;
+        gap:5px
+    }
+
+    .main-left{
+        margin-left: 0px;
+    }
+
+    .main-right{
+        grid-template-rows: repeat(7,1fr);
+        
+    }
+
+    .box{
+        
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+}
